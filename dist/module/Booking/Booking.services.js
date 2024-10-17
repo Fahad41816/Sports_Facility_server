@@ -22,6 +22,7 @@ const GetAllBookingIntoDb = () => __awaiter(void 0, void 0, void 0, function* ()
         .populate('facility');
     return BookingData;
 });
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CreateBokkingIntoDb = (userDetails, BookingData) => __awaiter(void 0, void 0, void 0, function* () {
     // check the faculoty is avaiable
     const isExistsFacility = yield Facility_model_1.FacilityModel.findById(BookingData.facility);

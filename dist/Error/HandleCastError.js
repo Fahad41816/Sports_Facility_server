@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const HandleCastError = err => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const HandleCastError = (err) => {
     const ErrorSources = [
         {
             path: err.path,

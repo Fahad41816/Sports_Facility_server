@@ -40,7 +40,8 @@ const LoginUserInDb = (userData) => __awaiter(void 0, void 0, void 0, function* 
         expiresIn: '10d',
     });
     return {
-        AccessToken: `Bearer ${AccessToken}`,
+        AccessToken: `${AccessToken}`,
+        data: IsUserExists
     };
 });
 exports.UserService = {

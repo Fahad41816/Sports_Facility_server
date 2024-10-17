@@ -1,4 +1,5 @@
-const HandleCastError = err => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const HandleCastError = (err : any) => {
   const ErrorSources = [
     {
       path: err.path,

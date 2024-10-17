@@ -6,10 +6,10 @@ import moment from 'moment'
 const getAvailableSlots = (bookings: any, totalSlots: any) => {
   const availableSlots: { startTime: string; endTime: string }[] = []
 
-  totalSlots.forEach(slot => {
+  totalSlots.forEach((slot : any) => {
     let isAvailable = true
 
-    bookings.forEach(booking => {
+    bookings.forEach((booking : any) => {
       const bookingStart = moment(booking.startTime, 'HH:mm')
       const bookingEnd = moment(booking.endTime, 'HH:mm')
       const slotStart = moment(slot.startTime, 'HH:mm')

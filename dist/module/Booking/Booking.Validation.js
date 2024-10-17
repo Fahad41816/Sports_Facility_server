@@ -7,7 +7,6 @@ const BookingValidationWithZod = zod_1.z.object({
     startTime: zod_1.z.string(),
     endTime: zod_1.z.string(),
     facility: zod_1.z.string(),
-    payableAmount: zod_1.z.string(),
 });
 exports.BookingValidate = {
     BookingValidationWithZod,

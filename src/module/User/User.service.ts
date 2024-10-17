@@ -11,7 +11,7 @@ const createUserInToDb = async (UserData: TUser) => {
   return Result
 }
 
-const LoginUserInDb = async userData => {
+const LoginUserInDb = async (userData : any) => {
   const IsUserExists = await UserModel.findOne({ email: userData.email })
 
   if (!IsUserExists) {
@@ -38,7 +38,8 @@ const LoginUserInDb = async userData => {
   })
 
   return {
-    AccessToken: `Bearer ${AccessToken}`,
+    AccessToken: `${AccessToken}`,
+    data : IsUserExists
   }
 }
 

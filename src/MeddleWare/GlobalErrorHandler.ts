@@ -9,7 +9,8 @@ import HandleZodError from '../Error/HandleZodError'
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next: NextFunction) => {
   let statusCode = 500
   let message = err.message || 'Something went wrong!'
-  let ErrorSources = [
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let ErrorSources : any = [
     {
       path: '',
       message: 'Someting Wrong!!',

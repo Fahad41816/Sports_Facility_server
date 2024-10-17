@@ -25,7 +25,6 @@ const auth = (...RequiredRoles) => {
         }
         const decoded = jsonwebtoken_1.default.verify(Token, config_1.default.JWTSecret);
         const { userId, role, iat, exp } = decoded;
-        console.log(decoded);
         if (RequiredRoles && !RequiredRoles.includes(role)) {
             throw new AppError_1.default(401, 'You have no access to this route');
         }

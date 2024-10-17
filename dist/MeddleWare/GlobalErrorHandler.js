@@ -11,6 +11,7 @@ const HandleZodError_1 = __importDefault(require("../Error/HandleZodError"));
 const globalErrorHandler = (err, req, res, next) => {
     let statusCode = 500;
     let message = err.message || 'Something went wrong!';
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let ErrorSources = [
         {
             path: '',

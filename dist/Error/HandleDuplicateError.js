@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const HandleDuplicateError = err => {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+const HandleDuplicateError = (err) => {
     const match = err.message.match(/"([^"]*)"/);
     const extractMessage = match && match[1];
     const ErrorSources = [

@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BookingController = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const CatchAsync_1 = __importDefault(require("../../utils/CatchAsync"));
 const Booking_services_1 = require("./Booking.services");
 const GettAllBookings = (0, CatchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {

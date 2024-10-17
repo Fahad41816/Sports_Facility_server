@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Request, RequestHandler, Response } from 'express'
 import { UserService } from './User.service'
 import CatchAsync from '../../utils/CatchAsync'
@@ -19,16 +20,19 @@ const CreateUser: RequestHandler = CatchAsync(
 )
 
 const loginUser = CatchAsync(async (req, res) => {
-  const Userinfo = req.body
+  const Userinfo : any = req.body
 
-  const UserData = await UserService.LoginUserInDb(Userinfo)
+   
+  const UserData : any = await UserService.LoginUserInDb(Userinfo)
 
   res.status(200).json({
     success: true,
     statusCode: 200,
-    message: 'User Login successfully',
-    data: UserData.AccessToken,
+    message: "User logged in successfully",
+    token: UserData.AccessToken,
+    data:  UserData.data
   })
+
 })
 
 export const UserController = {

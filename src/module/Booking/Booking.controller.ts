@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import CatchAsync from '../../utils/CatchAsync'
 import { BookingServices } from './Booking.services'
 
@@ -12,7 +13,7 @@ const GettAllBookings = CatchAsync(async (req, res) => {
   })
 })
 
-const GetbookingByUserid = CatchAsync(async (req, res) => {
+const GetbookingByUserid = CatchAsync(async (req : any, res) => {
   const userid = req.user.userId
 
   const Result = await BookingServices.GetBookingByUserIdIntoDb(userid)
@@ -34,7 +35,7 @@ const GetbookingByUserid = CatchAsync(async (req, res) => {
   })
 })
 
-const CancleBooking = CatchAsync(async (req, res) => {
+const CancleBooking = CatchAsync(async (req: any, res) => {
   const cancleResult = await BookingServices.CancleBookingIntoDb(req.params.id)
 
   res.status(200).json({
@@ -45,7 +46,7 @@ const CancleBooking = CatchAsync(async (req, res) => {
   })
 })
 
-const CreateBookings = CatchAsync(async (req, res) => {
+const CreateBookings = CatchAsync(async (req: any, res) => {
   const BookingData = req.body
 
   const userDetails = req.user

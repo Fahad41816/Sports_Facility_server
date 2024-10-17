@@ -10,7 +10,8 @@ const GetAllBookingIntoDb = async () => {
 
   return BookingData
 }
-const CreateBokkingIntoDb = async (userDetails, BookingData: TBooking) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CreateBokkingIntoDb = async (userDetails : any, BookingData: TBooking) => {
   // check the faculoty is avaiable
   const isExistsFacility = await FacilityModel.findById(BookingData.facility)
 

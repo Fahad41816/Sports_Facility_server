@@ -18,9 +18,9 @@ const Booking_model_1 = require("../Booking/Booking.model");
 const moment_1 = __importDefault(require("moment"));
 const getAvailableSlots = (bookings, totalSlots) => {
     const availableSlots = [];
-    totalSlots.forEach(slot => {
+    totalSlots.forEach((slot) => {
         let isAvailable = true;
-        bookings.forEach(booking => {
+        bookings.forEach((booking) => {
             const bookingStart = (0, moment_1.default)(booking.startTime, 'HH:mm');
             const bookingEnd = (0, moment_1.default)(booking.endTime, 'HH:mm');
             const slotStart = (0, moment_1.default)(slot.startTime, 'HH:mm');

@@ -4,8 +4,7 @@ const BookingValidationWithZod = z.object({
   date: z.string(),
   startTime: z.string(),
   endTime: z.string(),
-  facility: z.string(),
-  payableAmount: z.string(),
+  facility: z.string(), 
 })
 
 export const BookingValidate = {

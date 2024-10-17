@@ -32,8 +32,9 @@ const loginUser = (0, CatchAsync_1.default)((req, res) => __awaiter(void 0, void
     res.status(200).json({
         success: true,
         statusCode: 200,
-        message: 'User Login successfully',
-        data: UserData.AccessToken,
+        message: "User logged in successfully",
+        token: UserData.AccessToken,
+        data: UserData.data
     });
 }));
 exports.UserController = {
